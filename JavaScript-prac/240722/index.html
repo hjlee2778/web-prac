@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script>
+        // 이벤트 연결
+        $(document).ready(function () {
+            // 스타일 속성을 변경합니다.
+            $('h1').css('color', 'red');
+            $('h1').css('background', 'black');
+        });
+
+        //이벤트 연결
+        $(document).ready(function() {
+            //속성 추출
+            let src = $('script').attr('src');
+
+            //출력
+            alert(src);
+        });
+        
+    </script>
+</head>
+<body>
+    <h1>Header</h1>
+    <h1>Header</h1>
+    <h1>Header</h1>
+</body>
+</html>

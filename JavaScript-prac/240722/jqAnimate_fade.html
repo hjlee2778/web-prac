@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.6.4.js"></script>
+    <script>
+        //이벤트 연결
+        $(document).ready(function() {
+            //이벤트 연결
+            $('button').click(function() {
+                //간단한 효과 적용
+                $('.page').fadeToggle('fast');
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>Toggle Show</button>
+    <div class="page">
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam natus placeat consequatur, officiis asperiores in incidunt blanditiis quia dolor doloribus laudantium nesciunt ut fugiat hic voluptate ab obcaecati sequi dolorem.</p>
+    </div>
+</body>
+</html>

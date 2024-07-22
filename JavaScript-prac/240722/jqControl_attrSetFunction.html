@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //이벤트 연결
+        $(document).ready(function() {
+            //속성 지정
+            $('img').attr({
+                alt: 'jQuery 라이브러리를 사용한 속성 지정',
+                src: function (index) {
+                    //변수 선언
+                    let size = (index + 1) * 100;
+
+                    //반환
+                    return 'http://via.placeholder.com/' + size + 'x100';
+
+                }
+            });
+        });  
+    </script>
+</head>
+<body>
+    <img>
+    <img>
+    <img>
+    <img>
+</body>
+</html>
