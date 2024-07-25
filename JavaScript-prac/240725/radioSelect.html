@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            //문서 객체 추출
+            const output = document.querySelector('#output')
+            const radios = document.querySelectorAll('[name=song]')
+
+            //모든 라디오 버튼에
+            radios.forEach((radio) => {
+                //이벤트 연결
+                radio.addEventListener('change', (event) => {
+                    const current = event.currentTarget
+                    if (current.checked) {
+                        output.textContent = `좋아하는 음악 장르는 ${current.value} 입니다!`
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <h3># 좋아하는 음악 장르를 선택해주세요</h3>
+    <input type = "radio" name="song" value="K-POP">
+    <span>K-POP</span>
+    <input type = "radio" name="song" value="J-POP">
+    <span>J-POP</span>
+    <input type = "radio" name="song" value="발라드">
+    <span>발라드</span>
+    <input type = "radio" name="song" value="힙합">
+    <span>힙합</span>
+    <input type = "radio" name="song" value="기타">
+    <span>기타</span>
+    <hr>
+    <h3 id = "output"></h3>
+</body>
+</html>
