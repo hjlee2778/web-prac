@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //객체 선언
+        const students = []
+        students.push({이름: '구름', 국어: 87, 영어: 88, 수학: 99, 과학: 95})
+        students.push({이름: '별이', 국어: 57, 영어: 60, 수학: 90, 과학: 98})
+        students.push({이름: '바다', 국어: 97, 영어: 90, 수학: 76, 과학: 85})
+        students.push({이름: '겨울', 국어: 77, 영어: 88, 수학: 85, 과학: 94})
+
+        //객체를 처리하는 함수를 선언
+        function getSumOf (student) {
+            return student.국어 +student.영어 + student.수학 + student.과학
+        }
+
+        function getAverageOf (student) {
+            return getSumOf(student) / 4
+        }
+
+        //출력합니다.
+        let output = '이름\t총점\t평균\n'
+        for (const s of students) {
+            output += `${s.이름}\t${getSumOf(s)}점\t${getAverageOf(s)}점\n`
+        }
+        console.log(output)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
