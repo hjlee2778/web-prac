@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="./form.js"></script>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+<!--     <div>
+    "프로그래머스 프론트엔드"
+    <p>선수 조건: 없음</p>
+    </div>
+    <button onclick="changeContent()">변경</button>
+    <ul>
+        <li class = "fruit apple">Apple</li>
+        <li class = "fruit banana">Banana</li>
+        <li class = "fruit cherry">Cherry</li>
+    </ul>
+    
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+    <div class="box">box4</div>
+
+    <button id ="my_div">my_div</button>
+    <button id ="clearbtn">clear</button>
+    <div id="result"></div>
+
+    <button onclick="sayHi('heeju')">안녕</button> -->
+
+ <!--    <ul id ="fruits">
+        <li id = "apple">Apple</li>
+        <li id = "banana">Banana</li>
+        <li id = "cherry">Cherry</li>
+    </ul> -->
+
+
+<!--     <button>Click</button>
+    <em class="message"></em> -->
+
+    <!-- <div class="todo-list">
+        <h2>Today's To-Do List</h2>
+        <ul>
+            <li>오늘 할 일 1</li>
+            <li>오늘 할 일 2</li>
+            <li>오늘 할 일 3</li>
+            <li>오늘 할 일 4</li>
+            <li>오늘 할 일 5</li>
+        </ul>
+    </div> -->
+
+<!--     <form id = "form1">
+        아이디 : <input type="text" name = "id" id="id"><br>
+        비밀번호 : <input type="text" name="pass" id="pass"><br>
+    </form>
+    <button onclick="myFunction()">입력</button>
+    <button onclick="getInput()">확인</button>
+    <p id ="show"></p> -->
+<!--   이름 / 연락처 / 주소/ 이름 / 연락처/ 주소 -->
+
+<!--     <form name="order">
+    <ul>
+        <li>
+            <label class="field" for="billingName">이름 :</label>
+            <input type="text" class="input-box" id="billingName" name="billingName">
+        </li>
+        <li>
+            <label class="field" for="billingTel">연락처 :</label>
+            <input type="text" class="input-box" id="billingTel" name="billingTel">
+        </li>
+        <li>
+            <label class="field" for="billingAddr">주소 :</label>
+            <input type="text" class="input-box" id="billingAddr" name="billingAddr">
+        </li>
+    </ul>
+    </form>    
+    <form name = "ship">
+    <ul>
+        <li>
+            <input type="checkbox" id="shippingInfo" name="shippingInfo">
+            <laber for="bill_info" class="check">주문 정보와 배송 정보가 같습니다.</laber>
+        </li>    
+        <li>
+            <label class="field" for="shippingName">이름 :</label>
+            <input type="text" class="input-box" id="shippingName" name="shippingName">
+        </li>
+        <li>
+            <label class="field" for="shippingTel">연락처 :</label>
+            <input type="text" class="input-box" id="shippingTel" name="shippingTel">
+        </li>
+        <li>
+            <label class="field" for="shippingAddr">주소 :</label>
+            <input type="text" class="input-box" id="shippingAddr" name="shippingAddr">
+        </li>
+    </ul>
+    </form> -->
+
+    <div class="container">
+        <h2>회원가입</h2>
+        <form id="signupForm">
+            <div class="form-group">
+                <label for="username">아이디</label>
+                <input type="text" id="username" name="username" placeholder="4~15자리의 영문과 숫자로 입력">
+                <div class="error" id="usernameError">아이디는 4~15자리의 영문과 숫자로 입력해야 합니다.</div>
+            </div>
+            <div class="form-group">
+                <label for="email">이메일</label>
+                <input type="email" id="email" name="email" placeholder="이메일 입력">
+                <div class="error" id="emailError">유효한 이메일을 입력해 주세요.</div>
+            </div>
+            <div class="form-group">
+                <label for="password">비밀번호</label>
+                <input type="password" id="password" name="password" placeholder="8자리 이상">
+                <div class="error" id="passwordError">비밀번호는 8자리 이상이어야 합니다.</div>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">비밀번호 확인</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="비밀번호 확인">
+                <div class="error" id="confirmPasswordError">비밀번호가 일치하지 않습니다.</div>
+            </div>
+            <div class="form-group">
+                <label>메일링 수신</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="mailing" value="yes">예</label>
+                    <label><input type="radio" name="mailing" value="no">아니오</label>
+                </div>
+            </div>
+            <div class="button-group">
+                <button type="button" class="submit-button" onclick="validateForm()">가입하기</button>
+                <button type="reset" class="cancel-button">취소</button>
+            </div>
+        </form>
+
+        이름: <input type="text" id="name"><br /><br />
+        <input type="text" placeholder="키를 입력하세요" id="keyInput">
+</body>
+</html>

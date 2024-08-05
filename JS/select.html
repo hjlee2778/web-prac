@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="./select.js"></script>
+    <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('major').addEventListener('change', function() {
+                let selectedOption = this.options[this.selectedIndex].text;
+                if (selectedOption !== '학과 선택') {
+                    alert('선택한 학과: ' + selectedOption);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="container">
+        <form name ="testForm">
+            <fieldset>
+            <ul>
+                <li>
+                    <label for="'userName">이름</label>
+                    <input type="text" id="userName" name="userName">
+                </li>
+                <li>
+                    <label for="class">수업</label>
+                    <select name="major" id="major">
+                        <option>학과 선택</option>
+                        <option value="">컴퓨터 공학과</option>
+                        <option value="">수학과</option>
+                        <option value="">일본어학과</option>
+                        <option value="">행정학과</option>
+                        <option value="">사회학과</option>
+                    </select>
+                </li>
+            </ul>
+             </fieldset>
+             <fieldset  >
+                <label for =""><input type="radio" name="subject" value="back">백엔드</label>
+                <label for =""><input type="radio" name="subject" value="front">프론트엔드</label>
+                <label for =""><input type="radio" name="subject" value="full">풀스택</label>
+             </fieldset>
+             <fieldset>
+                <label><input type="checkbox" name = "morning">아침</label>
+                <label><input type="checkbox" name = "afternoon">점심</label>
+                <label><input type="checkbox" name = "evening">저녁</label>
+             </fieldset>
+             <button type="button" id="submitBtn">확인</button>  
+        </form>
+    </div>
+    <dive id="result"></dive>
+</body>
+</html>
