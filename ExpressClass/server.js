@@ -9,13 +9,6 @@ const users = [
     {name: 'park', email: 'park@gmail.com'},
 ]
 
-
-
-
-
-
-
-
 app.use(express.static(__dirname + '/public'))
 
 app.get('/', (req, res) => {
