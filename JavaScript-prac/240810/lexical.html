@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log(apple)  // ReferenceError: Cannot access 'apple' before initialization
+        console.log(banana) // ReferenceError: Cannot access 'banana' before initialization
+        console.log(cherry) // undefined
+
+        const apple = 'apple'; 
+        let banana = 'banana'; 
+        var cherry = 'cherry'; 
+
+        function fruit () {
+            const name = 'color';
+            console.log(`${name}, ${apple}, ${banana}, ${cherry}`); // 'color, apple, banana, cherry'
+        }
+
+        fruit();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
