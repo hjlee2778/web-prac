@@ -1,13 +1,14 @@
 export type Customer = {
-    id: number;
+    id: string;
     name: string;
-    address: string;
+    address : string;
     email: string;
+    description? : string;
 }
 
 export type Product = {
-    id: number;
+    id : number;
     name: string;
-    description: string;
-    price: number;
+    description : string;
+    price : number;
 }
