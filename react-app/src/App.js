@@ -10,9 +10,10 @@ import HeaderComponent from './components/HeaderComponent';
 import BodyComponent from './components/BodyComponent';
 import FooterComponent from './components/FooterComponent'
 import MovieComponent from './components/MovieComponent';
-import { useState } from 'react';
+// import { useState } from 'react';
 import userId from './components/userId';
 import userPw from './components/userPw';
+import UserCard from './components/UserCard';
 
 /* function App() {
   return (
@@ -103,7 +104,7 @@ export default App; */
 
 export default App; */
 
-function App() {
+//function App() {
   //const [1,2] = useState(초기값)
   // 초기값 : 숫자, 문자열, 객체, 배열, 함수
 /*   const [인사, 인사변경] = useState(["안녕하세요", "재미있는", "이벤트"])
@@ -201,7 +202,7 @@ return (
 
 } */
 
-const [id, setId] = useState("");
+/* const [id, setId] = useState("");
 const [pw, setPw] = useState("");
 
 function addIdHandler(id) {
@@ -238,5 +239,271 @@ return (
  );
 
 }
+
+export default App; */
+
+/*   const user = {
+    name: "Lee Hee Ju",
+    age: 25,
+    email: "lhj2778@naver.com",
+  };
+
+  return (
+    <div>
+      <UserCard {...user} />
+    </div>
+  );
+ }; */
+
+/*  function App () { 
+  const [value, setValue] = useState('안녕하세요');
+  const [font, setFont] = useState('50px')
+
+  function changeFont(size) {
+    setFont(size)
+  }
+
+  const fontStyle = {
+    fontSize : font
+  }
+  return (
+    <>
+      <div style={fontStyle}>{value}</div>
+      <button ocClick={() => {changeFont('100px')}}>글자크기변경</button>
+    </>
+  ) 
+}
+export default App; */
+
+/* function App () { 
+  const [color, setColor] = useState('black');
+
+  const fontColor = {
+    color : color,
+  };
+
+  return (
+    <>
+      <div style={fontColor}>글자색 바꾸기</div>
+      <button onClick={() => {setColor('red')}}>빨간색</button>
+      <button onClick={() => {setColor('green')}}>초록색</button>
+      <button onClick={() => {setColor('blue')}}>파란색</button>
+    </>
+  ) 
+}
+export default App; */
+
+
+/* function App () { 
+  // 2. useState() 설계 -> 초기값 : 객체
+  const [form, setForm] = useState({ username: "", message: ""});
+
+  function onChangeHandler(e) {
+    // 객체나 배열의 값을 변경 => Spread 연산자
+    // Spread 연산자로 값 복사한 경우 -> 뒤에 나오는 값이 최신 값
+    // Key를 만들 때는 'e.target.name'으로 만들면 새로운 Key를 생성함
+    // Key를 만들 때는 반드시 []를 이용해서 만들어야 함.
+    const newForm = { ...form, [e.target.name]: e.target.value};
+
+    // 원본 form 객체를 -> newForm의 값으로 변경
+    setForm(newForm);
+  }
+
+  return (
+    <>
+      <h1>사용자 이름 : {form.username} </h1>
+      <h1>내용 : {form.message} </h1>
+      <input type="text" name="username" onChange={onChangeHandler}/>
+      <input type="text" name="message" onChange={onChangeHandler}/>
+    </>
+  ) 
+}
+export default App; */
+
+/* function App () { 
+  const [message, setMessage] = useState({ title: "제목", color: "black" });
+
+  function changeMessage(msg) {
+    // msg = e.target.value = title
+    // console.log(msg)
+    // 객체 값 변경 -> Spread 연산자
+    const newMessage = { ...message};
+    newMessage.title = msg
+    newMessage.color = "red"
+
+    // 원본 객체를 새로운 객체 변경
+    setMessage(newMessage);
+  }
+
+  function showMessage() {
+    alert(message.title);
+  }
+
+
+  return (
+    <>
+      <h1 style={{color: message.color}}>{message.title} </h1>
+      <hr/>
+      <input type="text" onChange={(e) => {changeMessage(e.target.value)}}/>
+    </>
+  ) 
+}
+export default App; */
+
+
+/* function App () { 
+
+
+  return (
+    <>
+
+    </>
+  ) 
+}
+export default App;
+ */
+
+/* import React from 'react';
+import IntroductionProps from './components/IntroductionProps';
+// App 컴포넌트를 정의합니다. 이는 애플리케이션의 최상위 컴포넌트
+function App() {
+  // JSX를 사용하여 컴포넌트의 구조를 정의
+  return (
+    // className="App"을 가진 div로 전체 앱을 감쌉니다.
+    // 이는 CSS 스타일링을 위해 사용될 수 있습니다.
+    <div className="App">
+      <IntroductionProps />
+    </div>
+  );
+}
+export default App; */
+
+/* import Button1 from "./components/Button1";
+ import Button2 from "./components/Button2";
+ function App() {
+  return (
+    <div>
+      <Button1 />
+      <Button2 />
+    </div>
+  );
+ }
+ export default App; */
+
+ /* import styled from "styled-components";
+
+ const StyledComponent = () => {
+  const Button = styled.button `
+    background: ${(props) => (props.promary ? "palevioletred" : "white")};
+    color: ${(props) => (props.primary ? "white" : "palevioletred")};
+    font-size: 1em;
+    margin: 1em;
+    padding: 0.25em 1em;
+    border: 2px solid palevioletred;
+    border-radius: 3px;
+  `;
+
+  return (
+    <div>
+      <Button>Normal</Button>
+      <Button primary>Primary</Button>
+    </div>
+  );
+ };
+
+ export default StyledComponent; */
+
+ /* import styled from "styled-components";
+
+ const StyledComponent = () => {
+  const Container = styled.div`
+  background: black;
+  padding: 1rem;
+  margin: 0 auto;
+
+  width: 1024px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+  `
+
+  const Button = styled.button `
+    background: ${(props) => (props.main ? "blue" : "")};
+    color: ${(props) => (props.main ? "white" : "black")};
+    border: ${(props) => (props.main ? "3px solid yellow" : "")};
+    font-size: 1em;
+    margin: 1em;
+    padding: 0.25em 1em;
+    border-radius: 3px;
+  `;
+
+  return (
+    <Container>
+      <Button>버튼 1</Button>
+      <Button main>버튼 2</Button>
+    </Container>
+  );
+ };
+
+ export default StyledComponent; */
+/* 
+ import {useEffect, useState} from "react";
+
+const Prac03 = () => {
+  const [count, setCount] = useState(0);
+  const [renderCount, setRenderCount] = useState(0);
+
+    useEffect(() => {
+      setRenderCount(renderCount + 1);
+      console.log("랜더링 완료");
+    });
+
+  return (
+    <div>
+      <h1>Count : {count}</h1>
+      <button onClick={() => setCount(count + 1)}>클릭</button>
+    </div>
+  );  
+};
+
+ export default Prac03; */
+
+/* import {useRef, useState} from "react";
+
+ function App () {
+  const style = {
+    margin: "30px",
+  };
+
+  const [name, setName] = useState('sooa');
+  const [age, setAge] = useState(10);
+
+  const nameRef = useRef();
+  const ageRef = useRef();
+
+  return (
+    <div>
+      <div style={style}>
+        <h1>input 태그 value 값 지정</h1>
+        이름 : <input type="text" ref={nameRef} value={name} onChange={(e)=>setName(nameRef.current.value)} />
+        나이 : <input type="number" ref={ageRef} value={age} onChange={(e)=>setAge(ageRef.current.value)}/>
+      </div>
+    </div>
+  );
+ }
+
+ export default App; */
+
+import React from 'react';
+import ColorProvider from './components/ColorProvider';
+
+const App = () => {
+  return (
+    <div>
+      <ColorProvider />
+    </div>
+  );
+};
 
 export default App;
