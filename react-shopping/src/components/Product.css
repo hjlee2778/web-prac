@@ -1,0 +1,51 @@
+/* 전체 상품 리스트를 위한 그리드 레이아웃 */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 자동으로 상품 크기 맞춰서 배열 */
+    gap: 20px; /* 각 제품 간 간격 */
+    padding: 20px;
+}
+
+/* 제품 카드 스타일 */
+.product-card {
+    width: 250px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px;
+}
+
+.product-card:hover {
+    transform: translateY(-10px); /* 마우스를 올렸을 때 살짝 위로 떠오르는 효과 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 제품 이미지 스타일 */
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* 제품 이름 스타일 */
+.product-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
+    color: #333;
+}
+
+/* 제품 가격 스타일 */
+.product-price {
+    font-size: 1rem;
+    color: #ff5722;
+    font-weight: bold;
+    text-align: center;
+}

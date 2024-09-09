@@ -1,0 +1,88 @@
+/* 전체 화면에서 가운데 정렬 */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 음악 비트 시각화 요소 */
+.music-visualizer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 150px; /* 최대 높이를 지정 */
+    z-index: 0;
+}
+
+/* 비트 바 하나 */
+.bar {
+    width: 30px;
+    background-color: white;
+    margin: 0 1px;
+    height: 100%; /* 높이를 100%로 설정 */
+    transform-origin: bottom; /* 애니메이션이 아래에서 시작되도록 설정 */
+    animation: bounce 2s infinite ease-in-out;
+}
+
+/* 각 막대의 애니메이션을 다르게 설정 */
+.bar:nth-child(1) { animation-duration: 1.2s; }
+.bar:nth-child(2) { animation-duration: 1.8s; }
+.bar:nth-child(3) { animation-duration: 1.4s; }
+.bar:nth-child(4) { animation-duration: 1.9s; }
+.bar:nth-child(5) { animation-duration: 1.6s; }
+.bar:nth-child(6) { animation-duration: 1.5s; }
+.bar:nth-child(7) { animation-duration: 1.7s; }
+.bar:nth-child(8) { animation-duration: 1.3s; }
+.bar:nth-child(9) { animation-duration: 2s; }
+.bar:nth-child(10) { animation-duration: 1.1s; }
+.bar:nth-child(11) { animation-duration: 1.2s; }
+.bar:nth-child(12) { animation-duration: 1.4s; }
+.bar:nth-child(13) { animation-duration: 1.4s; }
+.bar:nth-child(14) { animation-duration: 1.9s; }
+.bar:nth-child(15) { animation-duration: 1.3s; }
+.bar:nth-child(16) { animation-duration: 1.5s; }
+.bar:nth-child(17) { animation-duration: 1.7s; }
+.bar:nth-child(18) { animation-duration: 1.3s; }
+.bar:nth-child(19) { animation-duration: 2s; }
+.bar:nth-child(20) { animation-duration: 1.1s; }
+
+/* 음악 비트 바 애니메이션 */
+@keyframes bounce {
+    0% {
+        transform: scaleY(0); /* 아래에서 시작 */
+    }
+    50% {
+        transform: scaleY(1); /* 최대 높이로 확장 */
+    }
+    100% {
+        transform: scaleY(0); /* 다시 아래로 돌아옴 */
+    }
+}
+
+/* 박스 스타일 */
+.box {
+    position: relative;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    z-index: 1; /* 박스는 비트 바 위에 위치 */
+}
+
+/* 헤드폰 아이콘 스타일 */
+.icon {
+    position: absolute;
+    top: 130px; /* 박스 위쪽으로 배치 */
+    font-size: 100px; /* 아이콘 크기 설정 */
+    color: white; /* 아이콘 색상 */
+}
