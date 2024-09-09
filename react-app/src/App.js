@@ -509,18 +509,23 @@ const App = () => {
 export default App; */
 
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import Home from './components/Home';
+import NotFound from './components/NotFound';
+import Root from './components/Root';
+import Product from './components/Product';
+import ProductInfo from './components/ProductInfo';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Home</div>,
-    errorElement: <div>Page Not Found</div>
+    element: <Root/>,
+    errorElement: <NotFound/>,
+    children: [
+      { index: true, element: <Home/>},
+      { path: "/product", element: <Product/>},
+      { path: "/product/:productId", element: <ProductInfo/>},
+    ],
   },
-  {
-    path: "/product",
-    element: <div>Product</div>,
-  },
-
 ]);
 
 const App = () => {
