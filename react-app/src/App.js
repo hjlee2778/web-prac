@@ -495,7 +495,7 @@ const Prac03 = () => {
 
  export default App; */
 
-import React from 'react';
+/* import React from 'react';
 import ColorProvider from './components/ColorProvider';
 
 const App = () => {
@@ -504,6 +504,27 @@ const App = () => {
       <ColorProvider />
     </div>
   );
+};
+
+export default App; */
+
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <div>Home</div>,
+    errorElement: <div>Page Not Found</div>
+  },
+  {
+    path: "/product",
+    element: <div>Product</div>,
+  },
+
+]);
+
+const App = () => {
+  return <RouterProvider router = {router}/>;
 };
 
 export default App;
